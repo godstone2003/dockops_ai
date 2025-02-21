@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text and DevOps Metrics Prediction</title>
+</head>
+<body>
+    <h1>Text Generation with GPT-2 and DevOps Metrics Prediction</h1>
+
+    <!-- Combined form for both text generation (GPT-2) and DevOps metrics prediction -->
+    <form action="/predict" method="post">
+        <h2>Text Generation (GPT-2)</h2>
+        <textarea name="text" rows="4" cols="50" placeholder="Enter some text for GPT-2..."></textarea><br><br>
+        
+        <h2>DevOps Metrics Prediction</h2>
+        <textarea name="devops_data" rows="4" cols="50" placeholder="Enter DevOps metrics data (e.g., Time to change, Build time, Build status)"></textarea><br><br>
+        
+        <input type="submit" value="Generate Text and Predict DevOps Metrics">
+    </form>
+
+    <!-- Displaying GPT-2 text generation result -->
+    <h2>Generated Text (GPT-2):</h2>
+    <p>{{ prediction }}</p>
+
+    <!-- Displaying DevOps metrics prediction result -->
+    <h2>Predicted Lead Time for Changes (LTC):</h2>
+    <p>{{ ltc_prediction }}</p>
+</body>
+</html>
