@@ -1,0 +1,135 @@
+ 1  sudo wget -O /usr/share/keyrings/jenkins-keyring.asc   https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+    2  echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]"   https://pkg.jenkins.io/debian-stable binary/ | sudo tee   /etc/apt/sources.list.d/jenkins.list > /dev/null
+    3  sudo apt-get update
+    4  sudo apt-get install jenkins
+    5  apt update
+    6  jenkins --version
+    7  sudo systemctl enable jenkins
+    8  sudo systemctl start jenkins
+    9  java -version
+   10  apt install openjdk-17-jre-headless
+   11  java -version
+   12  apt inatall jenkins -y
+   13  apt install jenkins -y
+   14  sudo systemctl enable jenkins
+   15  sudo systemctl start jenkins
+   16  sudo systemctl status jenkins
+   17  cat /var/lib/jenkins/secrets/initialAdminPassword
+   18  apt intall docker
+   19  apt install docker
+   20  sudo apt update && sudo apt upgrade -y
+   21  sudo apt install -y apt-transport-https ca-certificates curl software-properties-common
+   22  curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+   23  echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   24  sudo apt update
+   25  sudo apt install -y docker-ce docker-ce-cli containerd.io
+   26  sudo systemctl status docker
+   27  docker run hello-world
+   28  docker ps
+   29  cat /var/lib/jenkins/secrets/initialAdminPassword
+   30  ls
+   31  apt install awscli
+   32  sudo apt install -y curl unzip
+   33  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+   34  unzip awscliv2.zip
+   35  sudo ./aws/install
+   36  aws --version
+   37  rm -rf awscliv2.zip aws
+   38  whoami
+   39  sudo usermod -aG docker jenkins
+   40  sudo systemctl restart jenkins
+   41  docker ps
+   42  sudo reboot
+   43  git clone https://github.com/godstone2003/dockops_ai.git
+   44  cd dockops_ai
+   45  ls -l
+   46  ls
+   47  cd dockops_ai_llm
+   48  ls
+   49  cd /var/lib/jenkins/workspace/first-job
+   50  ls -al dockops_ai_llm  # Check inside this directory
+   51  ls -al dockops_ai_llm/docker  # If Dockerfile might be inside 'docker/' subdirectory
+   52  ls
+   53  cd dockops_ai_llm
+   54  ls
+   55  df -h
+   56  ls -l
+   57  df -hh
+   58  docker images
+   59  docker tag dockops_ai_repo:v1.0 dockops_ai_repo:latest
+   60  docker tag dockops_ai_repo dockops_ai_repo:latest
+   61  docker tag dockops_ai_repo:latest 636167220663.dkr.ecr.us-east-1.amazonaws.com/dockops_ai_repo:latest
+   62  docker tag dockops_ai_repo 636167220663.dkr.ecr.us-east-1.amazonaws.com/dockops_ai_repo:latest
+   63  docker rmi dockops_ai_repo:11
+   64  docker images
+   65  apt install python3 pip
+   66  pip install kubernetes
+   67  pip install kubernetes --break-system-packages
+   68  aws eks describe-nodegroup --cluster-name jenkins-eks-dockops-ai --nodegroup-name nodes --region us-east-1
+   69  lear
+   70  kubectl get pods
+   71  aws eks update-kubeconfig --region us-east-1 --name jenkins-eks-dockops-ai
+   72  apt install kubectl
+   73  sudo snap install kubectl --classic
+   74  kubectl get nodes
+   75  aws eks describe-cluster --name <your-cluster-name> --region us-east-1 --query "cluster.status"
+   76  aws eks describe-cluster --name jenkins-eks-dockops-ai --region us-east-1 --query "cluster.status"
+   77  aws eks update-kubeconfig --region us-east-1 --name jenkins-eks-dockops-ai
+   78  kubectl get nodes
+   79  kubectl get pods --all-namespaces
+   80  kubectl get podes
+   81  kubectl get pod
+   82  kubectl get pods
+   83  kubectl version --client
+   84  aws sts get-caller-identity
+   85  aws eks update-kubeconfig --region us-east-1 --name jenkins-eks-dockops-ai
+   86  kubectl get pods
+   87  aws eks describe-cluster --name jenkins-eks-dockops-ai --region us-east-1 --query "cluster.status"
+   88  kubectl get pods
+   89  kubectl config current-context
+   90  kubectl get pods --all-namespaces
+   91  kubectl get nodes
+   92  clear
+   93  aws eks describe-cluster --name jenkins-eks-dockops-ai --region us-east-1 --query "cluster.resourcesVpcConfig.securityGroupIds"
+   94  aws ec2 describe-security-groups --group-ids sg-0bb2950224d07d3ce
+   95  [200~aws ec2 authorize-security-group-ingress --group-id <your-security-group-id> --protocol tcp --port 443 --cidr 0.0.0.0/0
+   96  aws ec2 describe-security-groups --group-ids sg-0bb2950224d07d3ce
+   97  [200~aws eks describe-cluster --name <your-cluster-name> --region us-east-1 --query "cluster.resourcesVpcConfig.securityGroupIds"
+   98  aws eks describe-cluster --name jenkins-eks-dockops-ai --region us-east-1 --query "cluster.resourcesVpcConfig.securityGroupIds"
+   99  aws ec2 authorize-security-group-ingress --group-id sg-0bb2950224d07d3ce --protocol tcp --port 443 --cidr 0.0.0.0/0
+  100  aws eks describe-cluster --name jenkins-eks-dockops-ai --region us-east-1 --query "cluster.resourcesVpcConfig.vpcId"
+  101  aws ec2 describe-instances --query "Reservations[].Instances[].VpcId"
+  102  kubectl get nodes
+  103  kubectl get pods
+  104  aws eks describe-nodegroup --cluster-name jenkins-eks-dockops-ai --nodegroup-name nodes --region us-east-1
+  105  aws eks list-nodegroups --cluster-name jenkins-eks-dockops-ai --region us-east-1
+  106  aws eks describe-nodegroup --cluster-name jenkins-eks-dockops-ai --nodegroup-name nodes --region us-east-1
+  107  aws eks list-nodegroups --cluster-name jenkins-eks-dockops-ai --region us-east-1
+  108  kubectl get nodes
+  109  kubectl get pods
+  110  kubectl get nodes
+  111  aws ec2 describe-instance-status --instance-ids i-0636c8b43b6390f48 i-091371605cad5f1ea --region us-east-1
+  112  kubectl get nodes
+  113  sudo systemctl restart kubelet
+  114  apt install kubelet
+  115  snap install kubelet
+  116  snap install kubelet --classic
+  117  sudo systemctl restart kubelet
+  118  which kubelet
+  119  sudo systemctl start kubelet
+  120  exit
+  121  aws ec2 describe-instances --instance-ids i-0636c8b43b6390f48 i-091371605cad5f1ea --query "Reservations[].Instances[].IamInstanceProfile.Arn"
+  122  aws iam list-attached-role-policies --role-name arn:aws:iam::636167220663:instance-profile/eks-2ccaa43c-0ff6-deae-fbea-107971537c35
+  123  aws iam list-attached-role-policies --role-name 636167220663:instance-profile/eks-2ccaa43c-0ff6-deae-fbea-107971537c35
+  124  aws iam list-attached-role-policies --role-name
+  125  jenkins-node-role-1
+  126  aws iam list-attached-role-policies --role-name
+  127  jenkins-node-role-1
+  128  aws iam list-attached-role-policies --role-name jenkins-node-role-1
+  129  aws ec2 describe-security-groups --group-ids sg-0e77babb5ab463269
+  130  aws ec2 describe-nat-gateways --region us-east-1
+  131  kubectl get nodes
+  132  aws eks delete-nodegroup --cluster-name jenkins-eks-dockops-ai --nodegroup-name nodes --region us-east-1
+  133  systemctl --help
+  134  systemctl status docker
+  135  history
